@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{695867F3-4AED-4E66-A2B5-3D572FB52F01}</ProjectGuid>
+    <RootNamespace>Terminal</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.exe</TargetExt>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../pdcurs34;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../pdcurs34/;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/pdcurs34;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\pdcurs34\pdcurses\addch.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\addchstr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\addstr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\attr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\beep.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\bkgd.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\border.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\clear.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\color.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\debug.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\delch.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\deleteln.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\deprec.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\getch.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\getstr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\getyx.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\inch.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\inchstr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\initscr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\inopts.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\insch.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\insstr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\instr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\kernel.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\keyname.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\mouse.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\move.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\outopts.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\overlay.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\pad.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\panel.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\printw.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\refresh.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\scanw.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\scroll.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\scr_dump.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\slk.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\termattr.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\terminfo.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\touch.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\util.c" />
+    <ClCompile Include="..\pdcurs34\pdcurses\window.c" />
+    <ClCompile Include="..\pdcurs34\win32\pdcclip.c" />
+    <ClCompile Include="..\pdcurs34\win32\pdcdisp.c" />
+    <ClCompile Include="..\pdcurs34\win32\pdcgetsc.c" />
+    <ClCompile Include="..\pdcurs34\win32\pdckbd.c" />
+    <ClCompile Include="..\pdcurs34\win32\pdcscrn.c" />
+    <ClCompile Include="..\pdcurs34\win32\pdcsetsc.c" />
+    <ClCompile Include="..\pdcurs34\win32\pdcutil.c" />
+    <ClCompile Include="EnemySimple.cpp" />
+    <ClCompile Include="Entity\Entity.cpp" />
+    <ClCompile Include="entryPoint.cpp" />
+    <ClCompile Include="Inventory\Inventory.cpp" />
+    <ClCompile Include="ItemSystem\Item.cpp" />
+    <ClCompile Include="ItemSystem\StackedItem.cpp" />
+    <ClCompile Include="JMiles42\FileIO\CSVReader.cpp" />
+    <ClCompile Include="JMiles42\Maths\Vectors\Vector2i.cpp" />
+    <ClCompile Include="MapGenerator.cpp" />
+    <ClCompile Include="Maps\Map.cpp" />
+    <ClCompile Include="People\Person.cpp" />
+    <ClCompile Include="People\Player.cpp" />
+    <ClCompile Include="People\Skill.cpp" />
+    <ClCompile Include="People\Skills.cpp" />
+    <ClCompile Include="SubWindowWithBorder.cpp" />
+    <ClCompile Include="terminal.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\pdcurs34\curses.h" />
+    <ClInclude Include="..\pdcurs34\curspriv.h" />
+    <ClInclude Include="..\pdcurs34\panel.h" />
+    <ClInclude Include="..\pdcurs34\term.h" />
+    <ClInclude Include="EnemySimple.h" />
+    <ClInclude Include="Entity\Entity.h" />
+    <ClInclude Include="entryPoint.h" />
+    <ClInclude Include="InitWindows.h" />
+    <ClInclude Include="Inventory\Inventory.h" />
+    <ClInclude Include="ItemSystem\Item.h" />
+    <ClInclude Include="ItemSystem\Rarity.h" />
+    <ClInclude Include="ItemSystem\StackedItem.h" />
+    <ClInclude Include="ItemSystem\StaticItems.h" />
+    <ClInclude Include="JMiles42\FileIO\CSVReader.h" />
+    <ClInclude Include="JMiles42\Maths\Vectors\Direction.h" />
+    <ClInclude Include="JMiles42\Maths\Vectors\Vector2i.h" />
+    <ClInclude Include="RequiredVariables.h" />
+    <ClInclude Include="MapGenerator.h" />
+    <ClInclude Include="Maps\Levels\StartRoom.h" />
+    <ClInclude Include="Maps\Map.h" />
+    <ClInclude Include="MouseClicks.h" />
+    <ClInclude Include="People\Person.h" />
+    <ClInclude Include="People\Player.h" />
+    <ClInclude Include="People\Skill.h" />
+    <ClInclude Include="People\Skills.h" />
+    <ClInclude Include="SubWindowWithBorder.h" />
+    <ClInclude Include="terminal.h" />
+    <ClInclude Include="UniversalHeader.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
